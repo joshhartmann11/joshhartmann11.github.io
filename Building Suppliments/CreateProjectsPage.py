@@ -1,7 +1,7 @@
 import os
 
 PROJECTS_TEMPLATE = "projects_template.html"
-OUTPUT_NAME = "projects.html"
+OUTPUT_NAME = "../projects.html"
 PROJECTS_FOLDER = "../projects"
 START_TAG = "<!--1-->"
 NAME_TAG = "<name>"
