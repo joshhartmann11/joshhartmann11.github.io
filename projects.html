@@ -1,0 +1,195 @@
+
+
+<!DOCTYPE html>
+<html>
+<div id="page_wrapper">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,100italic,300italic,400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="Style Sheets/websiteStyle.css">
+		<div id="header">
+			<div id="title">
+				<title_text>Joshua Hartmann</title_text>
+			</div>
+			<div id="selections">
+				<selections_text>
+				<a href="index.html">Resume</a>
+				<h style="color: #3344AA;">&nbsp&nbsp&nbsp Projects</h>
+				<a href="about.html">&nbsp&nbsp&nbsp About Josh</a>
+				<a href="contact.html">&nbsp&nbsp&nbsp Contact</a>
+				</selections_text>
+			</div>
+			<div id="svg_circle">
+				<svg width="550px" height="150px"><circle cx="480" cy="30" r="30" fill="none">
+					<animateColor attributeName="fill"
+						from="#3344AA" to="none"
+						begin="0" dur="3.4s"
+						repeatCount="1"
+					/>
+					<animate attributeName="cx" attributeType="XML"
+						from="60"  to="480"
+						begin="0s" dur="0.5s" 
+						fill="remove"
+						repeatCount="1"
+					/>
+					<animate attributeName="cx" attributeType="XML"
+						from="480"  to="60"
+						begin="0.5s" dur="1s" 
+						fill="remove"
+						repeatCount="1"
+					/>
+					<animate attributeName="cx" attributeType="XML"
+						from="60"  to="480"
+						begin="1.5s" dur="2s" 
+						repeatCount="1"
+						fill="remove"
+					/>
+					<animateColor attributeName="fill"
+						from="none" to="#3344AA"
+						begin="4s" dur="3s"
+						fill="freeze"
+					/>
+			
+				</svg>
+			</div>
+		</div>
+			
+<!-- 		END OF SECTION CONSISTANT ON EVERY PAGE 						-->
+<!--		Thank-you for taking the time to visit my online profile :)		-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<div id="body"><br>
+
+
+
+
+
+<!-- Table of Contents-->
+<h1>
+<b>Contents</b><br>
+<a href="16/02/2018 - Fisher Finance Modeling Module">
+16/02/2018 - Fisher Finance Modeling Module
+</a><br>
+<a href="14/01/2018 - W-CIRC Co-op Reflection">
+14/01/2018 - W-CIRC Co-op Reflection
+</a><br>
+<a href="15/10/2017 - 3D Printer Update">
+15/10/2017 - 3D Printer Update
+</a><br>
+</h1>
+
+
+
+<br><br><div id="divline"></div><br><br>
+
+
+
+<!-- 16/02/2018 - Fisher Finance Modeling Module-->
+<h1><a name="16/02/2018 - Fisher Finance Modeling Module"></a>
+16/02/2018 - Fisher Finance Modeling Module
+</h1>
+<h2>
+
+After working at Environment and Climate Change Canada I was inspired to take my knowledge elsewhere.  After talking 
+with my brother, a finance major, we outlined a few areas of his work that could easily be automated and so we decided
+to work towards some solutions.  That solution is Fisher Finance.  The application is to be broken into modules and 
+the first iteration of the first module is complete!
+<br><br>
+<img src="Projects Suppliments/16-02-2018/FinanceModule1.png" style="width:40%;display:block;margin-left:auto;margin-right:auto">
+<br><br>
+This module, "Statistical Modeling", models opening, closing, high, and low stock price data for hourly, daily, weekly, and monthly time series. 
+The data is modeled for several distributions and the best fitted distribution is represented in the graph along with 
+a histogram of the data and the most recent data point. I'm using <a href="https://www.alphavantage.co">Alpha Vantage</a> 
+and getting my data from http get queries. For the modeling, I couldn't find a decent python module so I'm using the 
+<a href="http://www.gamlss.com">GAMLSS</a> package in R which I have previously worked with on co-op.
+<br><br>
+Continuing, the next modules that I'll be working on are the following: non-stationary models of the stock data with 
+indices as covariates; a web scraper to notify the user of unusual activity involving keywords defined by the user; 
+a module to produce excel company valuation documents (automating my brothers method); and recursive ANN prediction 
+(just an excuse to play with my NN work).
+
+</h2>
+
+
+
+<br><br><div id="divline"></div><br><br>
+
+
+
+<!-- 14/01/2018 - W-CIRC Co-op Reflection-->
+<h1><a name="14/01/2018 - W-CIRC Co-op Reflection"></a>
+14/01/2018 - W-CIRC Co-op Reflection
+</h1>
+<h2>
+
+The Water-Climate Impacts Research Center (W-CIRC), is a branch of Environment and Climate Change Canada
+involved in the research of climate change effects on Canadian water resources. My work was involved
+in the Canada-Albeta Joint Oil Sands monitoring program.  At W-CIRC, I was first tasked with performing
+non-stationary flood frequency analysis on predicted streamflow data. I modeled flood magnitudes
+using GAMLSS a package in R.  The models were then compared to outdated methods of non-stationary analysis. 
+The results from this comparison were used to create a poster for display at the AGU 2017 fall meeting. <br><br>
+
+<img src="Projects Suppliments/14-01-2018/AGU Poster.png" style="width:40%;display:block;margin-left:auto;margin-right:auto;"><br><br>
+
+The second part of my co-op term was processing a large dataset produced by a VIC model.  The dataset was
+>3 terabytes and provided a great deal of new challenges for me.  One of the challenges arose from the 
+sheer size of the set. 
+Single threaded scripts would have taken >5 days, so that was eliminated as an option for I needed to run 6 
+independant analyses. I used multithreaded processes 
+dividing the data set then combining it later as needed.  Each of my 6 analyses ended up taking around 15 hours each 
+which taught me a great deal about patience, building robust code, and testing.  Other challenges arose from
+corrupted data, microsoft automatic updates (haha), memory-disk access tradeoffs, cpu utilization, and many other
+challenges specific to the nature of the data. <br><br>
+
+Though these two tasks were the focus of my co-op term, most of my time was spent producing statistics and 
+visual representations of the data we were getting from the analyses. I used R, Matlab, GAMLSS, Excel, and ArcGIS to 
+produce over 5000 graphs and maps which visually conveyed my results to my supervisor and were used as a
+double check.  The figures were backed by a multitude of statistics from the data that were 
+produced using excel and R and ranged from De-trended Quantile-Quantile plots for checking the fit of the 
+streamflow models to contour plots of the streamflow magnitude results as a function of it's covariates.<br><br>
+
+Overall the experience I had at W-CIRC was amazing. I am often finding new applications of my newly found knowledge 
+in statistics, modeling, and programming. More importantly than all the technical knowledge, I also developed my
+time management, communication, organizational, and many more personal skills that will be with me in everything I do. 
+
+</h2>
+
+
+
+<br><br><div id="divline"></div><br><br>
+
+
+
+<!-- 15/10/2017 - 3D Printer Update-->
+<h1><a name="15/10/2017 - 3D Printer Update"></a>
+15/10/2017 - 3D Printer Update
+</h1>
+<h2>
+
+First axis complete! The motor, belt, shafts and electromagnet came from an old salvaged Cannon printer.
+This axis runs at a maximum speed of ~140 steps/second for a speed of ~70mm/second before the steps become consistently skipped. The stepper motor
+is a 5 wire design, 4 coils with one common.  The motor is wired up with +12 volts at the common
+and some transistors which ground each coil. Surprisingly, the transistors handle the 170mA load well enough, 
+which works out nicely because MOSFETs are in short supply. I've created a schematic of the circuit using Eagle 
+and then next step is to try out some DIY etching, more on that coming soon!<br><br>
+<img src="Projects Suppliments/15-10-2017/3D Printer X-Axis.gif" style="width:45%;"/>
+<img src="Projects Suppliments/15-10-2017/X-Axis Circuit Board.png" style="width:45%;float:right;"/><br><br>
+The first runs of the axis revealed a few problems with the mechanical design.  The angle that the belt makes with 
+the carriage is the first. I initially thought this wouldn't be a problem but as the angle increases on the motor side
+there is less contact with the gear which causes slipping. Another shortcoming with the drive belt is the friction 
+on the carriage. To solve both these problems, I'm going to make the carriage slimmer so that there's no sliding 
+of the belt on it.  This will increase the contact area with the motor and I'll be able to increase the tension
+on the belt.
+
+</h2>
+
+
+
+<!--1-->
+
+</div>
+</div></html>	
+
+
+
+
+
