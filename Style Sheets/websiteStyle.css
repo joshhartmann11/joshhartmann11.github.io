@@ -72,11 +72,11 @@
 		border-width: 1px;
 	}
 	a:link{
-		color: #005500;
+		color: #333333;
 		text-decoration: none;
 	}
 	a:visited{
-		color: #005500;
+		color: #333333;
 	}
 	a:hover{
 		color: #888888;
