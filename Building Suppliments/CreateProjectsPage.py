@@ -62,7 +62,7 @@ def create_contents(titles):
 	str += "<h1>\n"
 	str += "<b>Contents</b><br>\n"
 	for t in titles:
-		str += "<a href=\"" + t + "\">\n"
+		str += "<a href=\"#" + t + "\">\n"
 		str += t + "\n"
 		str += "</a><br>\n"
 	str += "</h1>"
