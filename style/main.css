@@ -1,0 +1,54 @@
+#page-wrapper {
+    margin: 2% 15% 2% 15%;
+}
+
+#divline {
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+}
+
+a {
+    color: black;
+    font-style: none;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+    font-style: none;
+    text-decoration: none;
+}
+a:hover {
+    color: #00aa00;
+    font-style: none;
+    text-decoration: none;
+}
+a:active {
+    color: #00aa00;
+    font-style: italic;
+    text-decoration: none;
+}
+
+/* Title Font */
+h1 {
+    font-size: 22px;
+}
+
+/* Subtitle Font */
+h2 {
+    font-size: 18px;
+}
+
+/* Body Font */
+h3 {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+/* Small Font */
+h4 {
+    font-size: 12px;
+    font-weight: normal;
+}
