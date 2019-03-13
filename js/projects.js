@@ -1,5 +1,10 @@
 var projects = [
     {
+        "name": "BattleSnake 2019",
+        "date": "2019-03-13",
+        "path": "projects/battlesnake2019.html"
+    },
+    {
         "name": "Codan Radio Co-op",
         "date": "2019-01-10",
         "path": "projects/codan.html"
@@ -30,7 +35,7 @@ var projects = [
         "path": "projects/fisherfinance.html"
     },
     {
-        "name": "Battle Snake 2018",
+        "name": "BattleSnake 2018",
         "date": "2018-03-08",
         "path": "projects/battlesnake2018.html"
     },
