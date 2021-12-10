@@ -1,5 +1,10 @@
 var projects = [
     {
+        "name": "3D Printer",
+        "date": "2021-09-01",
+        "path": "projects/3dprinter2.html"
+    },
+    {
         "name": "Arduinoscope Prototype",
         "date": "2020-09-12",
         "path": "projects/arduinoscope.html"
