@@ -1,3 +1,8 @@
+body{
+    background-color: #c3b9a0;
+    font-family: sans-serif;
+}
+
 #page-wrapper {
     margin-bottom: 2%;
     margin-top: 2%;
@@ -46,15 +51,17 @@ h2 {
     font-size: 18px;
 }
 
-/* Body Font */
+/* Should not be used */
 h3 {
     font-size: 16px;
-    font-weight: normal;
+    color: #ff3333;
+}
+
+p {
+    font-size: 16px;
     line-height: 1.5;
 }
 
-/* Small Font */
-h4 {
-    font-size: 12px;
-    font-weight: normal;
+li {
+    line-height: 1.5;
 }

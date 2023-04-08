@@ -85,7 +85,7 @@ function insert_project(project) {
 
     var projectClassPre = '<div class="project" id="' + date + '">\n'
     var projectTitle = '<h1>' + date + ' - ' + name + '</h1>\n'
-    var projectText = '<h3><div include-html="' + path + '"></h3>\n'
+    var projectText = '<p><div include-html="' + path + '"></p>\n'
     var projectLine = '<br><div id="divline"></div><br>\n'
     var projectClassPost = '</div>\n'
 
