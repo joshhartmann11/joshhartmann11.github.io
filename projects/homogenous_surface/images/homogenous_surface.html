@@ -1,0 +1,40 @@
+<!-- include:header -->
+<!-- include:header -->
+
+<h1>3D Printing Homogeneous Surfaces</h1>
+
+I was playing around with fuzzy skin for the first time and noticed the side wall tecture closely matched the bottom surface from my textured PEI bed.
+3 of the 4 surfaces were almost indistinguisable from each-other.
+The print almost doesn't even look FDM 3D printed.
+How closely can we match top, bottom and side surfaces?
+
+Some googling found <a href="https://github.com/TengerTechnologies/Fuzzyficator">Fuzzyficator</a>, a post-processing script to make top surfaces Fuzzy.
+I had to modify this script to work with my flavor of SuperSlicer gcode.
+Then added the script to the post-processing scripts section of SuperSlicer.
+
+I designed a simple model, with flat sides, bottom, top, and a 45-degree slope, to test with.
+My belted-Z printer made light work of the fuzzy top surface.
+I varied layer height, fuzzy skin thickness, and point distance till I was satisfied with the results.
+
+The settings I settled on, for my 0.4mm nozzle printing PETG, were:
+<ul>
+    <li>Layer Height: 0.2mm</li>
+    <li>Fuzzy skin thickness: 30%</li>
+    <li>Fuzzy skin point distance: 50%</li>
+</ul>
+
+For the the top surface, <a href="https://github.com/TengerTechnologies/Fuzzyficator">Fuzzyficator</a> matches the side-wall fuzzy skin print settings.
+However, it doesn't quite match. I modified the <a href="https://github.com/TengerTechnologies/Fuzzyficator">Fuzzyficator</a> post-processing script to scale the fuzzy skin thickness.
+The final best matches settings were:
+<ul>
+    <li>Layer Height: 0.2mm</li>
+    <li>Fuzzy skin thickness: 30%</li>
+    <li>Fuzzy skin point distance: 50%</li>
+    <li>Fuzzy skin thickness top surface scale: 1.2<li>
+</ul>
+
+
+
+
+<!-- include:footer -->
+<!-- include:footer -->
