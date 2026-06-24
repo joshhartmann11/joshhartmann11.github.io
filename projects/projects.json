@@ -1,12 +1,12 @@
 [
     {
-        "folder": "3dprinter",
-        "title": "My First (and Second) 3D Printer",
-        "date": "2022-12-08"
-    },
-    {
         "folder": "tek_tds420a",
         "title": "My Tektronics TDS420A",
         "date": "2026-06-23"
+    },
+    {
+        "folder": "3dprinter",
+        "title": "My First (and Second) 3D Printer",
+        "date": "2022-12-08"
     }
 ]
