@@ -78,3 +78,7 @@ p {
 li {
     line-height: 1.5;
 }
+
+img {
+    border: 5px solid #5b5e5f;
+}
