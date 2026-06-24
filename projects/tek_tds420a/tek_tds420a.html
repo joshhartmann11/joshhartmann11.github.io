@@ -1,0 +1,111 @@
+<!-- include:header -->
+<html>
+<head>
+<title>Josh Hartmann</title>
+<link rel="stylesheet" type="text/css" href="/style/main.css">
+</head>
+<body>
+<div id="page-wrapper">
+<div id="header">
+<div id="title">Josh Hartmann</div>
+<div id="navigation">
+<div class="nav-link"><a href="/index.html">Resume</a></div>
+<div class="nav-link"><a href="/projects.html">Projects</a></div>
+<div class="nav-link"><a href="/contact.html">Contact</a></div>
+</div>
+<br>
+<div id="divline"></div>
+<k style="font-size:4px;"><br></k>
+<div id="divline"></div>
+<br>
+</div>
+<!-- include:header -->
+
+<h1>Tektronix TDS420A</h1>
+I recently became an owner of a Tektonix TDS420A Oscilloscope. It was a $100 Marketplace find but did not boot.
+
+<br><br>
+<img src="images/scope.jpeg" style="width:80%;margin-left:auto;margin-right:auto;display:block;"></img>
+<br>
+
+<h2>Repair</h2>
+I found an <a href="https://www.eevblog.com/forum/repair/tektronix-tds420a-no-display-on-crt-fan-10-leds-light-(hangs)/">EEVBlog forum post</a>
+describing my symptoms. Upon power on, the device does not boot but all panel LEDs are on. The solution was to piggyback a 50k resistor
+on the resistor mentioned in the form post.
+After diggin under the clear silicone potting.
+
+
+IMAGE COMING NEXT TIME I OPEN THE THING UP.
+
+
+This resistor connects to what looks like some undervoltage protection circuit.
+I'm guessing this threshold is set a little agressively and susceptible to aging components.
+
+<h2>Upgrades</h2>
+The TDS420A is old enough to not care about DRM. 
+It's a breath of fresh air to be able to poke any bit of memory over an RS232 serial console. 
+Lucklily, the bits you need to poke to enable options were already worked out by Tom in <a hef="https://tomverbeure.github.io/2020/07/11/Option-Hacking-the-Tektronix-TDS-420A.html">his excellent blog post</a>, which guided the following mods.
+
+<h3>RS232 to USB Converter</h3>
+The RS232 interface isn't the typical TTL voltage levels you see in modern devices.
+I measured the data lines at +-15V!
+Looking online, converters were expensive (and usually from DB9 to USB-A), and adapter boards don't really exist.
+I created my own based on an <a href="https://ftdichip.com/wp-content/uploads/2020/08/DS_FT232R.pdf">FTDI232R USB to UART converter</a> and a 
+<a href="https://www.ti.com/lit/ds/symlink/max232.pdf">MAX232 RS232 driver & reciever</a> with USB-C.
+Shoutout <a href="https://www.kicad.org/">KiCad</a>.
+
+<br><br>
+<img src="images/adapter-board.jpeg" style="width:40%;margin-left:auto;margin-right:auto;display:block;"></img>
+<img src="images/board-render.jpeg" style="width:40%;margin-left:auto;margin-right:auto;display:block;"></img>
+<br>
+
+I also 3D printed a card slot to integrate the board permanently in my oscilloscope.
+
+<br><br>
+<img src="images/3d-printed-slot.jpeg" style="width:50%;margin-left:auto;margin-right:auto;display:block;"></img>
+<br>
+
+If you're interested in this little mod, email me.
+If there's interest, I can clean it up and publish on Github.
+
+<h3>Adding Memory</h3>
+The most involved mod was adding sample memory.
+I bought 10 <a href="https://www.cselettronica.com/datasheet/M5M51008.pdf">M5M551008-70H</a> SOP-32 SRAM for $14 (CAD) shipped <a href="https://www.aliexpress.com/item/1005007383531106.html?spm=a2g0o.order_list.order_list_main.77.31a41802Q0b0Mo#nav-specification">from Aliexpress</a>.
+The chips were hand-soldered to the missing memory locations.
+It took me some time with a multimeter to find a few bad solder joints, but was able to find and correct them all.
+Most of the addressing pins are connected in parallel across banks of chips, which made this task easy.
+
+<h3>Configuring Options</h3>
+With the memory added, I could configure options through the serial console.
+Refer to <a href="https://tomverbeure.github.io/2020/07/11/Option-Hacking-the-Tektronix-TDS-420A.html">Tom's blog</a> for details.
+My TDS420A now has all options (though I'm considering removing option 5, video triggering, I don't need that!).
+
+<br><br>
+<img src="images/all-options.jpeg" style="width:50%;margin-left:auto;margin-right:auto;display:block;"></img>
+<br>
+
+
+<h2>Next Work</h2>
+I am currently waiting on some <a href="https://github.com/xyphro/UsbGpib">xyphro USB to GPIB adapter boards</a> to interface with my desktop computer. 
+The TDS420A interface leaves a lot to be desired, colored channels for one.
+
+I am a software developer by trade, and plan on adding support in <a href="https://github.com/ngscopeclient/scopehal">scopehal</a> 
+for <a href="https://www.ngscopeclient.org/">ngscopeclient</a>, an open source remote T&M equiptment interface. 
+I will update this post once support is added.
+
+
+<!-- include:footer -->
+<div id="footer">
+<br><br>
+<div id="divline"></div>
+<br>
+<center>
+<a href="#header">top</a>
+</center>
+<br>
+</div>
+
+</div>
+</body>
+</html>
+<!-- include:footer -->
