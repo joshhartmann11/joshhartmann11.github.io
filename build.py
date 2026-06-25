@@ -91,6 +91,8 @@ def buildProjectsPage(projectFile, projectDir, projectJson, projectTag):
     with open(projectJson, "r") as f:
         projectInfo = json.load(f)
 
+    projectInfo = sorted(projectInfo, key=lambda x: x["date"], reverse=True)
+
     projectList = "<ul>\n"
 
     for p in projectInfo:
